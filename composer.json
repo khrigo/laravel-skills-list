@@ -1,0 +1,41 @@
+{
+    "name": "khrigo/laravel-skills-list",
+    "description": "List of all LinkedIn skills for Laravel",
+    "keywords": ["laravel", "skills"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ihor Khrypchenko",
+            "email": "me@khrigo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "illuminate/support": "^5.8|^6|^7|^8|^9|^10",
+        "khrigo/skills-list": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Khrigo\\SkillsList\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Khrigo\\SkillsList\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Khrigo\\SkillsList\\SkillsListServiceProvider"
+            ],
+            "aliases": {
+                "Skills": "Khrigo\\SkillsList\\SkillsListFacade"
+            }
+        }
+    }
+}
